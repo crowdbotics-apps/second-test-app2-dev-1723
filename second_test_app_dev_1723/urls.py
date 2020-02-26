@@ -33,9 +33,9 @@ urlpatterns = [
     path("home/", include("home.urls")),
 ]
 
-admin.site.site_header = "second-test-app"
-admin.site.site_title = "second-test-app Admin Portal"
-admin.site.index_title = "second-test-app Admin"
+admin.site.site_header = "second-test-app2"
+admin.site.site_title = "second-test-app2 Admin Portal"
+admin.site.index_title = "second-test-app2 Admin"
 
 # swagger
 schema_view = get_schema_view(
