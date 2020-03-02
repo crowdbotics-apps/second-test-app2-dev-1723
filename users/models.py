@@ -7,8 +7,15 @@ from django.utils.translation import ugettext_lazy as _
 
 class User(AbstractUser):
     name = models.CharField(null=True, blank=True, max_length=255,)
-    username = models.CharField(max_length=100, null=True, blank=True,)
-    email = models.EmailField(max_length=254, null=True, blank=True,)
+    username = models.CharField(null=True, blank=True, max_length=100,)
+    email = models.EmailField(null=True, blank=True, max_length=254,)
+    birth_date = models.DateField(null=True, blank=True,)
+    test = models.BigIntegerField(null=True, blank=True,)
+    test12345 = models.BigIntegerField(null=True, blank=True,)
+    testmore = models.DecimalField(
+        max_digits=30, decimal_places=10, null=True, blank=True,
+    )
+    anothertest = models.IntegerField(null=True, blank=True,)
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
