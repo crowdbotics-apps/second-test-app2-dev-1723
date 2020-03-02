@@ -16,6 +16,9 @@ class User(AbstractUser):
         max_digits=30, decimal_places=10, null=True, blank=True,
     )
     anothertest = models.IntegerField(null=True, blank=True,)
+    test57435 = models.DurationField(null=True, blank=True,)
+    anotherfinal = models.SmallIntegerField(null=True, blank=True,)
+    final = models.SmallIntegerField(null=True, blank=True,)
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
