@@ -13,7 +13,7 @@ class User(AbstractUser):
     test = models.BigIntegerField(null=True, blank=True,)
     test12345 = models.BigIntegerField(null=True, blank=True,)
     testmore = models.DecimalField(
-        max_digits=30, decimal_places=10, null=True, blank=True,
+        null=True, blank=True, max_digits=30, decimal_places=10,
     )
     anothertest = models.IntegerField(null=True, blank=True,)
     test57435 = models.DurationField(null=True, blank=True,)
